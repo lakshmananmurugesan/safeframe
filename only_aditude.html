@@ -1,45 +1,45 @@
 <html lang="en">
 <head>
   <title>Only Aditude ad</title>
-  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-  <script async src="https://web.prebidwrapper.com/poshmark-cDFbTI48Q3/poshmark-default/prebid-load.js"></script>
-  <script>
-    (function() {
-      window.tude = window.tude || { cmd: [] };
-
-      var isMobile = true;
-      var footerPlaceholderId = 'ad';
-      var footerPlaceholder = document.getElementById(footerPlaceholderId);
-
-      if (!footerPlaceholder) {
-        isMobile = false;
-        // Not mobile, check desktops
-        footerPlaceholderId = 'ad';
-        footerPlaceholder = document.getElementById(footerPlaceholderId);
-      }
-
-      if (footerPlaceholder) {
-        window.tude.cmd.push(function() {
-          if (false) {
-            window.tude.setPrivacySettings(
-              { personalizedAds: false }
-            );
-          }
-
-          window.tude.refreshAdsViaDivMappings([
-            {
-              divId: footerPlaceholderId,
-              baseDivId: 'pb-slot-footer',
-            }
-          ]);
-        });
-      };
-      console.log('only aditude script is loaded');
-    })();
-  </script>
 </head>
 <body>
 <div id="ad"></div>
 <div>This is only aditude</div>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script async src="https://web.prebidwrapper.com/poshmark-cDFbTI48Q3/poshmark-default/prebid-load.js"></script>
+<script>
+  (function() {
+    window.tude = window.tude || { cmd: [] };
+
+    var isMobile = true;
+    var footerPlaceholderId = 'ad';
+    var footerPlaceholder = document.getElementById(footerPlaceholderId);
+
+    if (!footerPlaceholder) {
+      isMobile = false;
+      // Not mobile, check desktops
+      footerPlaceholderId = 'ad';
+      footerPlaceholder = document.getElementById(footerPlaceholderId);
+    }
+
+    if (footerPlaceholder) {
+      window.tude.cmd.push(function() {
+        if (false) {
+          window.tude.setPrivacySettings(
+            { personalizedAds: false }
+          );
+        }
+
+        window.tude.refreshAdsViaDivMappings([
+          {
+            divId: footerPlaceholderId,
+            baseDivId: 'pb-slot-footer',
+          }
+        ]);
+      });
+    };
+    console.log('only aditude script is loaded');
+  })();
+</script>
 </body>
 </html>
