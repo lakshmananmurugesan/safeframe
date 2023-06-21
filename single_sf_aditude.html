@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>Single SF aditude</title>
+  <style>
+    div {
+        padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+<div id="ad"></div>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script async src="https://web.prebidwrapper.com/poshmark-cDFbTI48Q3/poshmark-default/prebid-load.js"></script>
+<script src="./lib/base.js"></script>
+<script src="./lib/host.js"></script>
+<script src="./lib/boot.js"></script>
+<script class='sf_data' type='text/x-safeframe'>
+      {
+          "id":		"listingAd",
+          "html": "<script>\n  (function() {\n    window.tude = window.tude || { cmd: [] };\n  \n    var isMobile = true;\n    var footerPlaceholderId = \'ad\';\n    var footerPlaceholder = document.getElementById(footerPlaceholderId);\n    \n    if (!footerPlaceholder) {\n      isMobile = false;\n      // Not mobile, check desktops\n      footerPlaceholderId = \'ad\';\n      footerPlaceholder = document.getElementById(footerPlaceholderId);\n    }\n    \n    if (footerPlaceholder) {\n      window.tude.cmd.push(function() {\n        if (false) {\n          window.tude.setPrivacySettings(\n            { personalizedAds: false }\n          );\n        }\n    \n        window.tude.refreshAdsViaDivMappings([\n          {\n            divId: footerPlaceholderId,\n            baseDivId: \'pb-slot-footer\',\n          }\n        ]); \n      });\n    }\n  })();\n<\/script>",
+          "conf":
+          {
+            "dest":	"ad",
+            "w": "970",
+            "h": "90"
+        }
+      }
+</script>
+<script type="text/javascript">
+  console.log('loaded', $sf);
+  // Initialize a new SafeFrames publisher configuration
+  var conf = new $sf.host.Config({
+    renderFile: '/render_ad.html',
+    positions: {}
+  });
+  var metaData = { pageUrl: window.location.href };
+  var posMeta = new $sf.host.PosMeta(metaData);
+  var pos = new $sf.host.Position({
+    id: 'listingAd',
+    html: "<script>\n  (function() {\n    window.tude = window.tude || { cmd: [] };\n  \n    var isMobile = true;\n    var footerPlaceholderId = \'ad\';\n    var footerPlaceholder = document.getElementById(footerPlaceholderId);\n    \n    if (!footerPlaceholder) {\n      isMobile = false;\n      // Not mobile, check desktops\n      footerPlaceholderId = \'ad\';\n      footerPlaceholder = document.getElementById(footerPlaceholderId);\n    }\n    \n    if (footerPlaceholder) {\n      window.tude.cmd.push(function() {\n        if (false) {\n          window.tude.setPrivacySettings(\n            { personalizedAds: false }\n          );\n        }\n    \n        window.tude.refreshAdsViaDivMappings([\n          {\n            divId: footerPlaceholderId,\n            baseDivId: \'pb-slot-footer\',\n          }\n        ]); \n      });\n    }\n  })();\n<\/script>",
+    conf: conf,
+    meta: posMeta
+  });
+  $sf.host.render(pos);
+  console.log('safeframe+aditude script is loaded', $sf);
+</script>
+</body>
+</html>
