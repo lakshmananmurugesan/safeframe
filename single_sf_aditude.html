@@ -10,19 +10,32 @@
 <body>
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-<div id="ad"></div>
+<div id="ad1"></div>
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+<div id="ad2"></div>
 <script src="./lib/base.js"></script>
 <script src="./lib/host.js"></script>
 <script src="./lib/boot.js"></script>
 <script class='sf_data' type='text/x-safeframe'>
       {
-          "id":		"listingAd",
-          "html": "<script>\n  (function() {\n    window.tude = window.tude || { cmd: [] };\n  \n    var isMobile = true;\n    var footerPlaceholderId = \'ad\';\n    var footerPlaceholder = document.getElementById(footerPlaceholderId);\n    \n    if (!footerPlaceholder) {\n      isMobile = false;\n      // Not mobile, check desktops\n      footerPlaceholderId = \'ad\';\n      footerPlaceholder = document.getElementById(footerPlaceholderId);\n    }\n    \n    if (footerPlaceholder) {\n      window.tude.cmd.push(function() {\n        if (false) {\n          window.tude.setPrivacySettings(\n            { personalizedAds: false }\n          );\n        }\n    \n        window.tude.refreshAdsViaDivMappings([\n          {\n            divId: footerPlaceholderId,\n            baseDivId: \'pb-slot-footer\',\n          }\n        ]); \n      });\n    }\n  })();\n<\/script>",
+          "id":		"listingAd1",
+          "html": "<script>\n  (function() {\n    window.tude = window.tude || { cmd: [] };\n  \n    var isMobile = true;\n    var footerPlaceholderId = \'ad1\';\n    var footerPlaceholder = document.getElementById(footerPlaceholderId);\n    \n    if (!footerPlaceholder) {\n      isMobile = false;\n      // Not mobile, check desktops\n      footerPlaceholderId = \'ad1\';\n      footerPlaceholder = document.getElementById(footerPlaceholderId);\n    }\n    \n    if (footerPlaceholder) {\n      window.tude.cmd.push(function() {\n        if (false) {\n          window.tude.setPrivacySettings(\n            { personalizedAds: false }\n          );\n        }\n    \n        window.tude.refreshAdsViaDivMappings([\n          {\n            divId: footerPlaceholderId,\n            baseDivId: \'pb-slot-footer\',\n          }\n        ]); \n      });\n    }\n  })();\n<\/script>",
           "conf":
           {
-            "dest":	"ad",
+            "dest":	"ad1",
+            "w": "970",
+            "h": "90"
+        }
+      }
+</script>
+<script class='sf_data' type='text/x-safeframe'>
+      {
+          "id":		"listingAd2",
+          "html": "<script>\n  (function() {\n    window.tude = window.tude || { cmd: [] };\n  \n    var isMobile = true;\n    var footerPlaceholderId = \'ad2\';\n    var footerPlaceholder = document.getElementById(footerPlaceholderId);\n    \n    if (!footerPlaceholder) {\n      isMobile = false;\n      // Not mobile, check desktops\n      footerPlaceholderId = \'ad2\';\n      footerPlaceholder = document.getElementById(footerPlaceholderId);\n    }\n    \n    if (footerPlaceholder) {\n      window.tude.cmd.push(function() {\n        if (false) {\n          window.tude.setPrivacySettings(\n            { personalizedAds: false }\n          );\n        }\n    \n        window.tude.refreshAdsViaDivMappings([\n          {\n            divId: footerPlaceholderId,\n            baseDivId: \'pb-slot-footer\',\n          }\n        ]); \n      });\n    }\n  })();\n<\/script>",
+          "conf":
+          {
+            "dest":	"ad2",
             "w": "970",
             "h": "90"
         }
