@@ -3,43 +3,46 @@
   <title>Only Aditude ad</title>
 </head>
 <body>
-<div id="ad"></div>
+<div id="newsfeed__d-au-ph-right"></div>
 <div>This is only aditude</div>
 <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 <script async src="https://web.prebidwrapper.com/poshmark-cDFbTI48Q3/poshmark-default/prebid-load.js"></script>
 <script>
   (function() {
     window.tude = window.tude || { cmd: [] };
-
-    var isMobile = true;
-    var footerPlaceholderId = 'ad';
-    var footerPlaceholder = document.getElementById(footerPlaceholderId);
-
-    if (!footerPlaceholder) {
-      isMobile = false;
-      // Not mobile, check desktops
-      footerPlaceholderId = 'ad';
-      footerPlaceholder = document.getElementById(footerPlaceholderId);
+    var adUnitConfig = 'normal';
+    var newsPlaceholderId = '';
+    if (adUnitConfig === 'normal') {
+      newsPlaceholderId = 'newsfeed__d-au-ph-right'
+    } else if (adUnitConfig === 'sticky') {
+      newsPlaceholderId = 'newsfeed__d-au-ph-right-sticky'
+    } else {
+      return;
     }
+  
+    var newsPlaceholder = document.getElementById(newsPlaceholderId);
 
-    if (footerPlaceholder) {
+    if (newsPlaceholder) {
+      newsPlaceholder.classList.remove('hide');
       window.tude.cmd.push(function() {
         if (false) {
           window.tude.setPrivacySettings(
             { personalizedAds: false }
           );
         }
-
+    
         window.tude.refreshAdsViaDivMappings([
           {
-            divId: footerPlaceholderId,
-            baseDivId: 'pb-slot-footer',
+            divId: newsPlaceholderId,
+            baseDivId: 'pb-slot-news-right',
+            targeting: {
+              type: adUnitConfig
+            }
           }
         ]);
       });
-    };
-    console.log('only aditude script is loaded');
-  })();
+    }
+  }());
 </script>
 </body>
 </html>
