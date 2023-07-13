@@ -45,7 +45,8 @@
   }());
 function myFunction(data) {
   // Perform some actions with the received data
-  alert(data);
+  console.log('in myfunc');
+  console.log(data);
 }  
 window.top.postMessage(myFunction.toString(), 'https://qa.goshd.com');
 </script>
