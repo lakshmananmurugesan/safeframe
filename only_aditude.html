@@ -43,21 +43,17 @@
       });
     }
   }());
-  window.addEventListener('message', event => {
-    console.log('Event registered');
-    // IMPORTANT: check the origin of the data!
-    if (event.origin === 'https://qa.goshd.com') {
-        // The data was sent from your site.
-        // Data sent with postMessage is stored in event.data:
-        console.log('Call method', event.data);
-    } else {
-        console.log('else call method', event.data);
-        event.data();
-        // The data was NOT sent from your site!
-        // Be careful! Do not use it. This else branch is
-        // here just for clarity, you usually shouldn't need it.
-        return;
-    }
+window.addEventListener('message', function(event) {
+  if (event.origin === 'https://qa.goshd.com') {
+    console.log('msg if');
+    // Create a new function from the received string
+    var receivedFunction = new Function(event.data);
+
+    // Execute the received function
+    receivedFunction('Some data');
+  } else {
+    console.log('msg else');
+  }
 });
 </script>
 </body>
