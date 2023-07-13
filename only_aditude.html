@@ -42,12 +42,8 @@
         ]);
       });
     }
-  }());
-function myFunction() {
-  // Perform some actions with the received data
-  console.log('in myfunc');
-}  
-window.top.postMessage(myFunction.toString(), 'https://qa.goshd.com');
+  }()); 
+window.top.postMessage('console.log("in myfunc")', 'https://qa.goshd.com');
 </script>
 </body>
 </html>
