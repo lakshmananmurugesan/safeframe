@@ -43,7 +43,35 @@
       });
     }
   }()); 
-window.top.postMessage('console.log("in myfunc")', 'https://qa.goshd.com');
+window.top.postMessage(`
+// Retrieve a reference to the iframe element
+var iframe = document.getElementById('adIFrame');
+
+// Function to handle the iframe content change event
+function handleContentChange() {
+  console.log('change iframe size');
+  // Adjust the iframe width and height based on its content
+  iframe.style.width = iframe.contentWindow.document.body.scrollWidth + 'px';
+  iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+}
+
+// Add an event listener for the 'load' event to detect when the iframe content is fully loaded
+iframe.addEventListener('load', function() {
+  // Call the handleContentChange function initially to set the size based on the initial content
+  handleContentChange();
+
+  // Add a MutationObserver to monitor changes in the iframe content
+  var observer = new MutationObserver(function() {
+    console.log('mutation iframe size');
+    handleContentChange();
+  });
+
+  // Specify the configuration for the MutationObserver
+  var config = { childList: true, subtree: true };
+
+  // Start observing the iframe content for changes
+  observer.observe(iframe.contentWindow.document.body, config);
+});`, 'https://qa.goshd.com');
 </script>
 </body>
 </html>
