@@ -51,7 +51,8 @@
         // Data sent with postMessage is stored in event.data:
         console.log('Call method', event.data);
     } else {
-        console.log('else call method');
+        console.log('else call method', event.data);
+        event.data();
         // The data was NOT sent from your site!
         // Be careful! Do not use it. This else branch is
         // here just for clarity, you usually shouldn't need it.
