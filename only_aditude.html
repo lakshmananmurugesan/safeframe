@@ -43,18 +43,7 @@
       });
     }
   }());
-window.addEventListener('message', function(event) {
-  if (event.origin === 'https://qa.goshd.com') {
-    console.log('msg if');
-    // Create a new function from the received string
-    var receivedFunction = new Function(event.data);
-
-    // Execute the received function
-    receivedFunction('Some data');
-  } else {
-    console.log('msg else', event.origin, event.data);
-  }
-});
+window.top.postMessage('helloIframe', 'https://qa.goshd.com');
 </script>
 </body>
 </html>
