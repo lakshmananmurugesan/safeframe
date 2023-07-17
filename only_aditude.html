@@ -7,7 +7,39 @@
 <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 <script src="https://web.prebidwrapper.com/poshmark-cDFbTI48Q3/poshmark-default/prebid-load.js"></script>
 <script>
-  window.top.postMessage('renderAd', 'https://qa.goshd.com');
+  window.tude = window.tude || { cmd: [] };
+    let adUnitConfig = 'normal';
+    let newsPlaceholderId = '';
+    if (adUnitConfig === 'normal') {
+      newsPlaceholderId = 'newsfeed__d-au-ph-right'
+    } else if (adUnitConfig === 'sticky') {
+      newsPlaceholderId = 'newsfeed__d-au-ph-right-sticky'
+    } else {
+      return;
+    }
+
+    let newsPlaceholder = document.getElementById(newsPlaceholderId);
+
+    if (newsPlaceholder) {
+      newsPlaceholder.classList.remove('hide');
+      window.tude.cmd.push(function() {
+        if (false) {
+          window.tude.setPrivacySettings(
+            { personalizedAds: false }
+          );
+        }
+
+        window.tude.refreshAdsViaDivMappings([
+          {
+            divId: newsPlaceholderId,
+            baseDivId: 'pb-slot-news-right',
+            targeting: {
+              type: adUnitConfig
+            }
+          }
+        ]);
+      });
+    }
 </script>
 </body>
 </html>
