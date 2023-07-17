@@ -6,5 +6,43 @@
 <div id="newsfeed__d-au-ph-right"></div>
 <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 <script async src="https://web.prebidwrapper.com/poshmark-cDFbTI48Q3/poshmark-default/prebid-load.js"></script>
+<script>
+  function renderAd() {
+  console.log('render ad called');
+  window.tude = window.tude || { cmd: [] };
+    var adUnitConfig = 'normal';
+    var newsPlaceholderId = '';
+    if (adUnitConfig === 'normal') {
+      newsPlaceholderId = 'newsfeed__d-au-ph-right'
+    } else if (adUnitConfig === 'sticky') {
+      newsPlaceholderId = 'newsfeed__d-au-ph-right-sticky'
+    } else {
+      return;
+    }
+
+    var newsPlaceholder = document.getElementById(newsPlaceholderId);
+
+    if (newsPlaceholder) {
+      newsPlaceholder.classList.remove('hide');
+      window.tude.cmd.push(function() {
+        if (false) {
+          window.tude.setPrivacySettings(
+            { personalizedAds: false }
+          );
+        }
+
+        window.tude.refreshAdsViaDivMappings([
+          {
+            divId: newsPlaceholderId,
+            baseDivId: 'pb-slot-news-right',
+            targeting: {
+              type: adUnitConfig
+            }
+          }
+        ]);
+      });
+    }
+}
+</script>
 </body>
 </html>
